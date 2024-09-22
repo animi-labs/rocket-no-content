@@ -1,6 +1,6 @@
 [package]
 name = "rocket-no-content"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "MIT"
 authors = ["Cyaxon Group"]
@@ -10,7 +10,7 @@ description = "Provides a 204 No Content responder for Rocket. Includes optional
 
 [features]
 schema = ["rocket_okapi", "okapi"]
-default = ["schema"]
+default = []
 
 [dependencies]
 rocket = { version = "0.5.0-rc.2", default-features = false }
