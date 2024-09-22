@@ -969,7 +969,7 @@ dependencies = [
 
 [[package]]
 name = "rocket-no-content"
-version = "0.1.2"
+version = "0.1.3"
 dependencies = [
  "autodocu",
  "rocket",
