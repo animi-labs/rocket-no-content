@@ -1,0 +1,21 @@
+# Specifies that this .editorconfig file applies to all projects in this directory.
+root = true
+
+[*]
+# Use spaces for indentation
+indent_style = space
+
+# Indentation size in spaces
+indent_size = 2
+
+# Line ending style: LF (Line Feed)
+end_of_line = lf
+
+# File encoding: UTF-8
+charset = utf-8
+
+# Remove trailing spaces (before line breaks)
+trim_trailing_whitespace = true
+
+# Insert a blank line at the end of the file
+insert_final_newline = true

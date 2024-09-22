@@ -1,0 +1,15 @@
+[package]
+name = "rocket-no-content"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+schema = ["rocket_okapi", "okapi"]
+default = ["schema"]
+
+[dependencies]
+rocket = { version = "0.5.0-rc.2", default-features = false }
+okapi = { version = "0.7.0", optional = true, default-features = false }
+rocket_okapi = { version = "0.8.0", optional = true, default-features = false }
