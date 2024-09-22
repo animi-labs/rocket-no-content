@@ -1,6 +1,6 @@
 use rocket::{
   response::{self, Responder},
-  Request, Response
+  Request, Response, http::Status,
 };
 
 pub struct EmptyResponse;
@@ -8,7 +8,7 @@ pub struct EmptyResponse;
 impl<'r> Responder<'r, 'static> for EmptyResponse {
   fn respond_to(self, _: &'r Request<'_>) -> response::Result<'static> {
     Response::build()
-      .status(rocket::http::Status { code: 204 })
+      .status(Status::NoContent)
       .ok()
   }
 }
