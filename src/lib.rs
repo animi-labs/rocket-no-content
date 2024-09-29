@@ -14,17 +14,17 @@ impl<'r> Responder<'r, 'static> for EmptyResponse {
 }
 
 #[cfg(feature = "schema")]
-use autodocu::openapi3::RefOr;
+use okapi::openapi3::RefOr;
 
 #[cfg(feature = "schema")]
-use rocket_autodocu::autodocu::openapi3;
+use rocket_okapi::okapi::openapi3;
 
 #[cfg(feature = "schema")]
-impl rocket_autodocu::response::OpenApiResponderInner for EmptyResponse {
+impl rocket_okapi::response::OpenApiResponderInner for EmptyResponse {
   fn responses(
-    _gen: &mut rocket_autodocu::gen::OpenApiGenerator,
-  ) -> std::result::Result<openapi3::Responses, rocket_autodocu::OpenApiError> {
-    let mut responses = autodocu::Map::new();
+    _gen: &mut rocket_okapi::gen::OpenApiGenerator,
+  ) -> std::result::Result<openapi3::Responses, rocket_okapi::OpenApiError> {
+    let mut responses = okapi::Map::new();
 
     responses.insert(
       "204".to_string(),
